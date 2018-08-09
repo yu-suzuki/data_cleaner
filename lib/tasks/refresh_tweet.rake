@@ -8,13 +8,15 @@ namespace :refresh_tweet do
     stopword = get_stop_word('lib/tasks/stopword.dic')
     filename = 'lib/tasks/tweetfile.txt'
     File.open(filename, 'w') do |f|
-      Parallel.map(Tweet::TweetText.all) do |t|
+      Parallel.map(Tweet::TweetText.all, progress: "Doing stuff") do |t|
         words = clean_text(t.text, stopword)
-        words.each do |w|
-          f.print(w)
-          f.print(' ')
+        if words.length > 1
+          words.each do |w|
+            f.print(w)
+            f.print(' ')
+          end
+          f.print("\n")
         end
-        f.print("\n")
       end
     end
   end
@@ -44,9 +46,9 @@ namespace :refresh_tweet do
     natto.parse(text) do |n|
       features = n.feature.split(',')
       words << features[6] unless n.surface.empty? \
-         || n.is_bos? || n.is_eos? || n.feature.start_with?('助詞') \
-         || n.feature.start_with?('助動詞') || n.feature.start_with?('記号,空白') \
-         || features[6].eql?('*')
+          || n.is_bos? || n.is_eos? || n.feature.start_with?('助詞') \
+          || n.feature.start_with?('助動詞') || n.feature.start_with?('記号,空白') \
+          || features[6].eql?('*')
     end
     words
   end
