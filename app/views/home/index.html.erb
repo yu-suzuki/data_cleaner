@@ -1,0 +1,16 @@
+<ul>
+  <% @tasks.each do |t| %>
+    <li>
+      <% task = DataCleanTask.find_by_task_id(t.id) %>
+      <% if task %>
+        (Task is
+        constructed) <%= link_to t.task_name, task %>
+        <% options(t.id).each do |o| %>
+          <%= o.id %>:<%= o.name %>
+        <% end  %>
+      <% else %>
+        <%= link_to t.task_name, new_data_clean_task_url(task_id: t.id, task_name: t.task_name) %>
+      <% end %>
+      </li>
+  <% end %>
+</ul>

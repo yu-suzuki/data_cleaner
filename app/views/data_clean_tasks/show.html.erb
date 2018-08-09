@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @data_clean_task.task_id %>
+</p>
+
+<p>
+  <strong>Task name:</strong>
+  <%= @data_clean_task.task_name %>
+</p>
+
+<%= link_to 'Edit', edit_data_clean_task_path(@data_clean_task) %> |
+<%= link_to 'Back', data_clean_tasks_path %>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="data_cleaner_development@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.9">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="crowdLabeling_development">
+      <ObjectId>16385</ObjectId>
+    </database>
+    <database id="3" parent="1" name="crowdLabeling_test">
+      <ObjectId>16386</ObjectId>
+    </database>
+    <database id="4" parent="1" name="crowdlabeler_development">
+      <ObjectId>16465</ObjectId>
+    </database>
+    <database id="5" parent="1" name="crowdlabeler_test">
+      <ObjectId>16466</ObjectId>
+    </database>
+    <database id="6" parent="1" name="data_cleaner_development">
+      <ObjectId>97934</ObjectId>
+      <IntrospectionStateNumber>115</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="7" parent="1" name="data_cleaner_test">
+      <ObjectId>97935</ObjectId>
+    </database>
+    <database id="8" parent="1" name="labeling_development">
+      <ObjectId>41305</ObjectId>
+    </database>
+    <database id="9" parent="1" name="labeling_test">
+      <ObjectId>41407</ObjectId>
+    </database>
+    <database id="10" parent="1" name="postgres">
+      <ObjectId>12558</ObjectId>
+      <Comment>default administrative connection database</Comment>
+    </database>
+    <database id="11" parent="1" name="twitter_development">
+      <ObjectId>94029</ObjectId>
+    </database>
+    <database id="12" parent="1" name="twitter_test">
+      <ObjectId>95529</ObjectId>
+    </database>
+    <database id="13" parent="1" name="ysuzuki">
+      <ObjectId>41304</ObjectId>
+    </database>
+    <role id="14" parent="1" name="crowdlabeling">
+      <ObjectId>16384</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="labeling">
+      <ObjectId>41306</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="18" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="19" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="20" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="21" parent="1" name="twitter">
+      <ObjectId>66446</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="22" parent="1" name="ysuzuki">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="23" parent="6" name="information_schema">
+      <ObjectId>12267</ObjectId>
+    </schema>
+    <schema id="24" parent="6" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+    </schema>
+    <schema id="25" parent="6" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="26" parent="6" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+    </schema>
+    <schema id="27" parent="6" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="28" parent="6" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <IntrospectionTimestamp>2018-08-07.16:10:23.802</IntrospectionTimestamp>
+      <IntrospectionStateNumber>601483</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="29" parent="6" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="30" parent="6" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="31" parent="6" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="32" parent="6" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="33" parent="6" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="34" parent="6" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="35" parent="28" name="data_clean_tasks_id_seq">
+      <ObjectId>97952</ObjectId>
+      <StateNumber>601481</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="36" parent="28" name="options_id_seq">
+      <ObjectId>97979</ObjectId>
+      <StateNumber>601483</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="37" parent="28" name="target_tweets_id_seq">
+      <ObjectId>97964</ObjectId>
+      <StateNumber>601482</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="38" parent="28" name="ar_internal_metadata">
+      <ObjectId>97944</ObjectId>
+      <StateNumber>601480</StateNumber>
+    </table>
+    <table id="39" parent="28" name="data_clean_tasks">
+      <ObjectId>97954</ObjectId>
+      <StateNumber>601483</StateNumber>
+    </table>
+    <table id="40" parent="28" name="options">
+      <ObjectId>97981</ObjectId>
+      <StateNumber>601483</StateNumber>
+    </table>
+    <table id="41" parent="28" name="schema_migrations">
+      <ObjectId>97936</ObjectId>
+      <StateNumber>601479</StateNumber>
+    </table>
+    <table id="42" parent="28" name="target_tweets">
+      <ObjectId>97966</ObjectId>
+      <StateNumber>601482</StateNumber>
+    </table>
+    <column id="43" parent="38" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601480</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="38" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>601480</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="38" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601480</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="46" parent="38" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601480</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="47" parent="38" name="ar_internal_metadata_pkey">
+      <ObjectId>97950</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="48" parent="38" name="ar_internal_metadata_pkey">
+      <ObjectId>97951</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601481</StateNumber>
+      <DefaultExpression>nextval(&apos;data_clean_tasks_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>data_clean_tasks_id_seq</SequenceName>
+    </column>
+    <column id="50" parent="39" name="task_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601481</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="39" name="task_name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601481</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="39" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601481</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="53" parent="39" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601481</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="54" parent="39" name="data_clean_tasks_pkey">
+      <ObjectId>97961</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="39" name="index_data_clean_tasks_on_task_id">
+      <ObjectId>97963</ObjectId>
+      <ColNames>task_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="39" name="data_clean_tasks_pkey">
+      <ObjectId>97962</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>data_clean_tasks_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="57" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601483</StateNumber>
+      <DefaultExpression>nextval(&apos;options_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>options_id_seq</SequenceName>
+    </column>
+    <column id="58" parent="40" name="data_clean_task_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>601483</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="59" parent="40" name="name">
+      <Position>3</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>601483</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="40" name="created_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601483</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="61" parent="40" name="updated_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601483</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="62" parent="40" name="options_pkey">
+      <ObjectId>97988</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="40" name="index_options_on_data_clean_task_id">
+      <ObjectId>97995</ObjectId>
+      <ColNames>data_clean_task_id</ColNames>
+    </index>
+    <key id="64" parent="40" name="options_pkey">
+      <ObjectId>97989</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>options_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="40" name="fk_rails_94987e093c">
+      <ObjectId>97990</ObjectId>
+      <ColNames>data_clean_task_id</ColNames>
+      <RefTableId>97954</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>data_clean_tasks</RefTableName>
+      <RefKeyName>data_clean_tasks_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="66" parent="41" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601479</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="67" parent="41" name="schema_migrations_pkey">
+      <ObjectId>97942</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="41" name="schema_migrations_pkey">
+      <ObjectId>97943</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601482</StateNumber>
+      <DefaultExpression>nextval(&apos;target_tweets_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>target_tweets_id_seq</SequenceName>
+    </column>
+    <column id="70" parent="42" name="tweet_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601482</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="71" parent="42" name="data_clean_task_id">
+      <Position>3</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>601482</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="72" parent="42" name="decision">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>601482</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="73" parent="42" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601482</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="74" parent="42" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>601482</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="75" parent="42" name="target_tweets_pkey">
+      <ObjectId>97971</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="42" name="index_target_tweets_on_data_clean_task_id">
+      <ObjectId>97978</ObjectId>
+      <ColNames>data_clean_task_id</ColNames>
+    </index>
+    <key id="77" parent="42" name="target_tweets_pkey">
+      <ObjectId>97972</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>target_tweets_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="78" parent="42" name="fk_rails_7a60a8fa79">
+      <ObjectId>97973</ObjectId>
+      <ColNames>data_clean_task_id</ColNames>
+      <RefTableId>97954</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>data_clean_tasks</RefTableName>
+      <RefKeyName>data_clean_tasks_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

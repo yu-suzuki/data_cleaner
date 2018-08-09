@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Clean Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Task name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_clean_tasks.each do |data_clean_task| %>
+      <tr>
+        <td><%= data_clean_task.task_id %></td>
+        <td><%= data_clean_task.task_name %></td>
+        <td><%= link_to 'Show', data_clean_task %></td>
+        <td><%= link_to 'Edit', edit_data_clean_task_path(data_clean_task) %></td>
+        <td><%= link_to 'Destroy', data_clean_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Clean Task', new_data_clean_task_path %>
