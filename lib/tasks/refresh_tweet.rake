@@ -1,13 +1,14 @@
 require 'natto'
 require 'uri'
 require 'nkf'
+require 'parallel'
 
 namespace :refresh_tweet do
   task task_model: :environment do
     stopword = get_stop_word('lib/tasks/stopword.dic')
     filename = 'lib/tasks/tweetfile.txt'
     File.open(filename, 'w') do |f|
-      Tweet::TweetText.all.each do |t|
+      Parallel.map(Tweet::TweetText.limit(10)) do |t|
         words = clean_text(t.text, stopword)
         words.each do |w|
           f.print(w)
