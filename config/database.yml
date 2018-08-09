@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  host: vm4
   database: data_cleaner_production
   username: data_cleaner
   password: <%= ENV['DATA_CLEANER_DATABASE_PASSWORD'] %>
